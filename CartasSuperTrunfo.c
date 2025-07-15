@@ -10,6 +10,8 @@ struct Carta //cria uma estrutura de dados (DataType)
     float Area;
     float PIB;
     int PTuristicos;
+    float PIBPerCap;
+    float DensPop;
 };
 
 
@@ -42,6 +44,13 @@ int main(){
 
         printf("Digite o Número de Pontos Turísticos da Carta1: ");
         scanf("%d",&Carta1.PTuristicos);
+
+        //Densidade Populacional
+        Carta1.DensPop = Carta1.Populacao / Carta1.Area;
+
+        //PIB per Capita
+        Carta1.PIBPerCap = Carta1.PIB / Carta1.Populacao;
+
     #pragma endregion
 
     #pragma region output carta1 //resultado carta 1
@@ -53,6 +62,8 @@ int main(){
         printf("Área: %2f\n",Carta1.Area);
         printf("PIB: %2f\n",Carta1.PIB);
         printf("Número de Pontos Turísticos: %d \n",Carta1.PTuristicos);
+        printf("Densidade Populacional: %2f hab/km²\n",Carta1.DensPop);
+        printf("PIB per Capita: %2f reais\n",Carta1.PIBPerCap);
     #pragma endregion
     
     #pragma region input carta2//recebe carta 2
@@ -80,6 +91,13 @@ int main(){
 
         printf("Digite o Número de Pontos Turísticos da Carta2: ");
         scanf("%d",&Carta2.PTuristicos);
+
+        //Densidade Populacional
+        Carta2.DensPop = Carta2.Populacao / Carta2.Area;
+
+        //PIB per Capita
+        Carta2.PIBPerCap = Carta2.PIB / Carta2.Populacao;
+
     #pragma endregion 
 
     #pragma region output carta2 //resultado carta 2
@@ -91,6 +109,8 @@ int main(){
         printf("Área: %2f\n",Carta2.Area);
         printf("PIB: %2f\n",Carta2.PIB);
         printf("Número de Pontos Turísticos: %d\n",Carta2.PTuristicos);
+        printf("Densidade Populacional: %2f hab/km²\n",Carta2.DensPop);
+        printf("PIB per Capita: %2f reais\n",Carta2.PIBPerCap);
     #pragma endregion
     
     return 0;
