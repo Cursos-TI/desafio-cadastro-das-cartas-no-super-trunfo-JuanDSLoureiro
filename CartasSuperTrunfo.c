@@ -121,14 +121,17 @@ int main(){
     #pragma endregion
     
     #pragma region Comparacao //resultado Comparacao entre as duas cartas
-        printf("\nComparação de Cartas:\n");
-        printf("População: Carta 1 venceu (%d)\n",Carta1.Populacao > Carta2.Populacao);
-        printf("Área: Carta 1 venceu (%d)\n",Carta1.Area > Carta2.Area);
-        printf("PIB: Carta 1 venceu (%d)\n",Carta1.PIB > Carta2.PIB);
-        printf("Pontos Turísticos: Carta 1 venceu (%d)\n",Carta1.PTuristicos > Carta2.PTuristicos);
-        printf("Densidade Populacional: Carta 1 venceu (%d)\n",Carta1.DensPop < Carta2.DensPop);
-        printf("PIB per Capita: Carta 1 venceu (%d)\n",Carta1.PIBPerCap > Carta2.PIBPerCap);
-        printf("Super Poder: Carta 1 venceu (%d)\n",Carta1.SuperPoder > Carta2.SuperPoder);
+        printf("\nComparação de cartas (Atributo: População):\n\n");
+        //exibe informação das duas cartas
+        printf("Carta 1 - %sR: %d\n",Carta1.Cidade,Carta1.Populacao);
+        printf("Carta 2 - %s: %d\n",Carta2.Cidade,Carta2.Populacao);
+        //compara e exibe a carta vencedora
+        if(Carta1.Populacao > Carta2.Populacao){
+            printf("Resultado: Carta 1 %s venceu!\n",Carta1.Cidade);
+        } else {
+            printf("Resultado: Carta 2 %s venceu!\n",Carta2.Cidade);
+        }
+        
     #pragma endregion
 
     return 0;
